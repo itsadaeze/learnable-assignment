@@ -9,11 +9,29 @@ import { IoLogoApple } from "react-icons/io";
 import { GrTwitter } from "react-icons/gr";
 import { MdEmail } from "react-icons/md";
 import { IoIosPhonePortrait } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+
+    const navigate = useNavigate();
+
+
+    const handleCancelClick = () => {
+        navigate("/");
+      };
+
   return (
-    <div className="h-screen flex items-center justify-center bg-gradient-to-r from-orange-500 to-red-500">
-      <div className=" flex items-center justify-center">
+    <div className="h-screen  bg-gradient-to-r from-orange-500 to-red-500">
+        <div className="flex justify-end">
+            <button
+                onClick={handleCancelClick} 
+                className=" text-xl text-[#ffffff] mt-[2rem]  mr-[4rem]"
+            >
+           x
+            </button>
+        </div>
+         
+      <div className=" flex items-center justify-center mt-[4rem]">
         <div className=" bg-white   shadow-md flex flex-col items-center justify-center py-8 px-9 rounded-l-[1rem] ">
           <img src={logo} alt="Logo" className="h-12 mb-4" />
           <h1 className="text-xl  text-[#333333]">Log in and Sign up</h1>

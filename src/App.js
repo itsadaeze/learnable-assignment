@@ -3,7 +3,7 @@ import './App.css';
 import Navbar from './Navbar';
 import LogoImage from '../src/boy-pic.svg'; 
 
-// import Login from './Login';
+
 
 function App() {
   return (
